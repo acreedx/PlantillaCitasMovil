@@ -10,6 +10,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class DoctorDetails extends StatefulWidget {
+  const DoctorDetails({super.key});
+
   @override
   _DoctorDetailsState createState() => _DoctorDetailsState();
 }
@@ -114,8 +116,8 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                           showExtendedText ? "Read less" : "Read more",
                           style: TextStyle(
                             color: showExtendedText
-                                ? Color.fromARGB(255, 1, 128, 111)
-                                : Color.fromARGB(255, 1, 128,
+                                ? const Color.fromARGB(255, 1, 128, 111)
+                                : const Color.fromARGB(255, 1, 128,
                                     111), // Change color based on visibility
                           ),
                         ),
@@ -123,16 +125,16 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
-                  child: Container(
+                  child: SizedBox(
                     height: MediaQuery.of(context).size.height * 0.11,
                     width: MediaQuery.of(context).size.width * 3,
                     child: ListView(
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: [
                         date_Select(date: "21", maintext: "Mon"),
@@ -161,14 +163,14 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                   height: 20,
                 ),
                 //Time select container importing widget from widgets/times_select
-                Container(
+                SizedBox(
                   height: MediaQuery.of(context).size.height * 0.2400,
                   width: MediaQuery.of(context).size.width * 0.9,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       //In main container 2 Columns use
-                      Container(
+                      SizedBox(
                         height: MediaQuery.of(context).size.height * 0.2500,
                         width: MediaQuery.of(context).size.width * 0.2900,
                         child: Column(
@@ -180,10 +182,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                               time_select(mainText: "07:00 AM"),
                             ]),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Container(
+                      SizedBox(
                         height: MediaQuery.of(context).size.height * 0.2500,
                         width: MediaQuery.of(context).size.width * 0.2500,
                         child: Column(
@@ -195,10 +197,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                               time_select(mainText: "09:00 PM"),
                             ]),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Container(
+                      SizedBox(
                         height: MediaQuery.of(context).size.height * 0.2500,
                         width: MediaQuery.of(context).size.width * 0.2500,
                         child: Column(
@@ -215,7 +217,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                 ),
               ],
             ),
-            Container(
+            SizedBox(
               height: 80,
               width: double.infinity,
               child: Padding(
@@ -243,13 +245,13 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                               context,
                               PageTransition(
                                   type: PageTransitionType.rightToLeft,
-                                  child: appointment()));
+                                  child: const appointment()));
                         },
                         child: Container(
                           height: MediaQuery.of(context).size.height * 0.06,
                           width: MediaQuery.of(context).size.width * 0.6300,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 2, 179, 149),
+                            color: const Color.fromARGB(255, 2, 179, 149),
                             borderRadius: BorderRadius.circular(30),
                           ),
                           child: Row(

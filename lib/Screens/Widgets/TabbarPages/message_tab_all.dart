@@ -67,7 +67,7 @@ class _TabBarExampleState extends State<message_tab_all>
                 context,
                 PageTransition(
                     type: PageTransitionType.bottomToTop,
-                    child: chat_screen()));
+                    child: const chat_screen()));
           },
           child: message_all_widget(
             image: "lib/icons/male-doctor.png",

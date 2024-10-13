@@ -8,8 +8,8 @@ class message_all_widget extends StatelessWidget {
   final String time;
   final String message_count;
 
-  message_all_widget(
-      {required this.Maintext,
+  const message_all_widget(
+      {super.key, required this.Maintext,
       required this.subtext,
       required this.image,
       required this.message_count,
@@ -19,7 +19,7 @@ class message_all_widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Container(
@@ -37,7 +37,7 @@ class message_all_widget extends StatelessWidget {
                       image: AssetImage(image),
                       filterQuality: FilterQuality.high)),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(
@@ -70,7 +70,7 @@ class message_all_widget extends StatelessWidget {
                     ),
                   ]),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.1200,
               child: Column(children: [
@@ -95,7 +95,7 @@ class message_all_widget extends StatelessWidget {
                         //Message Count Here
                         Text(
                           message_count,
-                          style: TextStyle(fontSize: 10, color: Colors.white),
+                          style: const TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ]),
                 )

@@ -4,7 +4,7 @@ import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Views/appointment.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
-import 'package:medical/Screens/Widgets/listicons.dart';
+import 'package:medical/Screens/Widgets/listIcons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -16,7 +16,7 @@ class find_doctor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Container(
+          icon: SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.06,
               child: Image.asset("lib/icons/back2.png")),
@@ -24,13 +24,13 @@ class find_doctor extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: Column(
           children: [
             Text(
               "Find Doctor",
               style: GoogleFonts.inter(
-                  color: Color.fromARGB(255, 51, 47, 47),
+                  color: const Color.fromARGB(255, 51, 47, 47),
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1),
@@ -44,14 +44,14 @@ class find_doctor extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: TextField(
                 textAlign: TextAlign.start,
                 textInputAction: TextInputAction.none,
@@ -60,13 +60,13 @@ class find_doctor extends StatelessWidget {
                 textAlignVertical: TextAlignVertical.center,
                 decoration: InputDecoration(
                   focusColor: Colors.black26,
-                  fillColor: Color.fromARGB(255, 247, 247, 247),
+                  fillColor: const Color.fromARGB(255, 247, 247, 247),
                   filled: true,
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.01,
                       width: MediaQuery.of(context).size.width * 0.01,
                       child: Image.asset(
@@ -76,7 +76,7 @@ class find_doctor extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: const Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -86,7 +86,7 @@ class find_doctor extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -99,7 +99,7 @@ class find_doctor extends StatelessWidget {
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 46, 46, 46),
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
               ),
@@ -142,7 +142,7 @@ class find_doctor extends StatelessWidget {
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 46, 46, 46),
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
               ),
@@ -179,7 +179,7 @@ class find_doctor extends StatelessWidget {
                   style: GoogleFonts.inter(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 46, 46, 46),
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
               ),
@@ -190,7 +190,7 @@ class find_doctor extends StatelessWidget {
           ),
           Row(
             children: [
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1400,
                 width: MediaQuery.of(context).size.width * 0.2900,
                 child: Column(children: [
@@ -212,7 +212,7 @@ class find_doctor extends StatelessWidget {
                   )
                 ]),
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1400,
                 width: MediaQuery.of(context).size.width * 0.2900,
                 child: Column(children: [
@@ -235,7 +235,7 @@ class find_doctor extends StatelessWidget {
                   )
                 ]),
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1400,
                 width: MediaQuery.of(context).size.width * 0.2900,
                 child: Column(children: [
